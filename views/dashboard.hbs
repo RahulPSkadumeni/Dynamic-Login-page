@@ -1,0 +1,84 @@
+ <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-info">
+  <a class="navbar-brand" href="#">Mobile World</a>
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      
+      
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      {{!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> --}}
+      <a class="btn btn-outline-success my-2 my-sm-0 bg-light" href="/logout">log out</a>
+    </form>
+  </div>
+</nav>
+
+    <section>
+    <div class="container mt-5">
+    <div class="row text-center  d-flex justify-content-around">
+
+        {{#each products}}
+
+                    <div class="col-12 col-sm-6 d-flex justify-content-around mt-5">
+                    <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src={{this.img}}>
+                <div class="card-body">
+                    <h5 class="card-title">{{this.name}}</h5>
+                    <p class="card-text">{{this.discription}}</p>
+                    <p class="card-text">{{this.category}}</p>
+                    <a href="#" class="btn btn-primary">Add to cart</a>
+                </div>
+                </div>
+                    </div>
+
+        {{/each}}
+
+
+<div class="list-group mt-5">
+  <a href="#" class="list-group-item list-group-item-action active">
+    Category
+  </a>
+  
+   {{#each list}}
+  <a href="#" class="list-group-item list-group-item-action">{{this.model}}</a>
+   {{/each}}
+</div>
+
+       
+ <table class="container-fluid table table-sm table-dark mt-5">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Top seller</th>
+      <th scope="col">Quantity</th>
+     
+    </tr>
+  </thead>
+  {{#each table}}
+  <tbody>
+    <tr>
+      <th>{{this.no}}</th>
+      <td>{{this.item}}</td>
+      <td>{{this.quantity}}</td>
+    </tr>    
+  </tbody>
+   {{/each}}
+</table>
+    </div>
+    </div>
+    </section>

@@ -1,0 +1,36 @@
+.heading{
+    color: red;
+}
+
+body{
+    background-color: rgba(80, 80, 80, 0.579);
+}
+
+.center-div{
+    padding-top: 10%;
+}
+
+
+.btn.btn-success{
+    padding: .4em 2em;
+    margin-top: 1em;
+}
+
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    /* background-image: url('/assets/background_png.png'); */
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+form{
+    padding: 0 3em;
+}
+
+
+#login .title > span{
+    font-size: .7em;
+}
